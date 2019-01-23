@@ -1,5 +1,4 @@
-Index for all the keyboards, search keyboard name here to go to the keyboard directory
-======================================================================================
+###Index for all the keyboards, search keyboard name here to go to the keyboard directory
 | Location | Keyboard |
 |----------|----------|
 |https://github.com/qmk/qmk_firmware/tree/master/keyboards/hadron/ver3|Hadron|
