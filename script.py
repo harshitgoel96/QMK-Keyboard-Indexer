@@ -30,9 +30,10 @@ f.write("| Keyboard | Location |\n")
 f.write("|----------|----------|\n")
 
 dfForIndex=pd.DataFrame(indexList)
-dfForIndex.columns = ["Parent Folder", "Board Name"]
-dfForIndex.sort_values(by=["Board Name"])
+dfForIndex.columns = ["ParentFolder", "BoardName"]
+dfForIndex=dfForIndex.sort_values("BoardName")
+print(dfForIndex)
 for index, row in dfForIndex.iterrows():
-    f.write("|{}|{}{}|\n".format(row["Board Name"],keyboardBaseLocation,row["Parent Folder"]))
+    f.write("|{}|{}{}|\n".format(row["BoardName"],keyboardBaseLocation,row["ParentFolder"]))
 
 f.close()
