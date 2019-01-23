@@ -26,9 +26,13 @@ for key in listOfKeys:
 f = open("index.md", "w")
 f.write("Index for all the keyboards, search keyboard name here to go to the keyboard directory\n")
 f.write("======================================================================================\n")
-f.write("| Location | Keyboard |\n")
+f.write("| Keyboard | Location |\n")
 f.write("|----------|----------|\n")
-for item in indexList:
-    f.write("|{}{}|{}|\n".format(keyboardBaseLocation,item[0],item[1]))
+
+dfForIndex=pd.DataFrame(indexList)
+dfForIndex.columns = ["Parent Folder", "Board Name"]
+dfForIndex.sort_values(by=["Board Name"])
+for index, row in dfForIndex.iterrows():
+    f.write("|{}|{}{}|\n".format(row["Board Name"],keyboardBaseLocation,row["Parent Folder"]))
 
 f.close()
