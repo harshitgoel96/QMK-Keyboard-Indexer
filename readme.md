@@ -1,0 +1,1 @@
+A simple script to create index  for qmk keybords.
