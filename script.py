@@ -24,8 +24,8 @@ for key in listOfKeys:
 #print (indexList)
 
 f = open("index.md", "w")
-f.write("###Index for all the keyboards, search keyboard name here to go to the keyboard directory\n")
-#f.write("======================================================================================\n")
+f.write("Index for all the keyboards, search keyboard name here to go to the keyboard directory\n")
+f.write("======================================================================================\n")
 f.write("| Location | Keyboard |\n")
 f.write("|----------|----------|\n")
 for item in indexList:
